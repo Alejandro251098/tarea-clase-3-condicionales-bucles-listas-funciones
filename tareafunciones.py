@@ -40,7 +40,6 @@
 # elimina(estudiantes , "juan")       
 
 
-
 # EJERCICIO 4 : INVERTIR LISTA 
 
 
@@ -56,20 +55,47 @@
   
 #  EJERCICIO 5 : VALIDACION DE PARENTESIS 
 
-def validar_parentesis(parentesis) :
-    validar =[] 
-    caracteres = { "(" : ")", "[" :"]" , "{":"}"}   
+# def validar_parentesis(parentesis) :
+#     validar =[] 
+#     caracteres = { "(" : ")", "[" :"]" , "{":"}"}   
     
-    for c in parentesis :
-        if c in caracteres :
-            validar.append(c)
+#     for c in parentesis :
+#         if c in caracteres :
+#             validar.append(c)
       
-        elif  len(caracteres) == 0 or c != caracteres[validar.pop()] :
-              return False
+#         elif  len(caracteres) == 0 or c != caracteres[validar.pop()] :
+#               return False
           
           
-    return len(validar) == 0
+#     return len(validar) == 0
 
-print(validar_parentesis("([{}])"))
-print(validar_parentesis("(((())))"))
-print(validar_parentesis("()[]{}("))        
+# print(validar_parentesis("([{}])"))
+# print(validar_parentesis("(((())))"))
+# print(validar_parentesis("()[]{}("))        
+
+
+# EJERCICIO 6 = cola de tareas
+
+class cola :
+    def tareas_hogar(tareas):
+        tareas.elementos= [] 
+        
+    def agregar_tareas(tareas,elemntos):
+        tareas.elementos.append(elemntos)
+        
+    def eliminar_tarea(tareas ):
+         if tareas.elementos  :
+             return tareas.elementos.pop(0)
+         
+         else:
+             return("la cola de tareas esta vacia")
+cola_tareas=cola()
+
+cola_tareas.agregar_tareas("ir a mercar")
+cola_tareas.agregar_tareas("lavar la ropa")
+cola_tareas.agregar_tareas("lavar la loza")
+cola_tareas.agregar_tareas("barrer y trapear")
+
+print(cola_tareas)         
+              
+# ejercicio 7 : contar elementos unicos
