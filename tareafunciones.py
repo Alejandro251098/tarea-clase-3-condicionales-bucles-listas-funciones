@@ -76,26 +76,47 @@
 
 # EJERCICIO 6 = cola de tareas
 
-class cola :
-    def tareas_hogar(tareas):
-        tareas.elementos= [] 
-        
-    def agregar_tareas(tareas,elemntos):
-        tareas.elementos.append(elemntos)
-        
-    def eliminar_tarea(tareas ):
-         if tareas.elementos  :
-             return tareas.elementos.pop(0)
-         
-         else:
-             return("la cola de tareas esta vacia")
-cola_tareas=cola()
 
-cola_tareas.agregar_tareas("ir a mercar")
-cola_tareas.agregar_tareas("lavar la ropa")
-cola_tareas.agregar_tareas("lavar la loza")
-cola_tareas.agregar_tareas("barrer y trapear")
+# cola_tareas = [ "hacer mercado" , "lavar loza" , "hacer el aseo" ]
 
-print(cola_tareas)         
+# def agregar_tarea(tareas_pendientes):
+#     tareas_pendientes.insert(cola_tareas)
+    
+#     print(cola_tareas)
+# agregar_tarea("lavar la ropa")
+# agregar_tarea("terminar las tareas de la U")
+# agregar_tarea("pasear el perro")
+
+
+# def eliminar_tareas(tareas_pendientes , cola_tareas):
+    
+#     if tareas_pendientes in cola_tareas:
+#        cola_tareas.pop(0)
+       
+#     else :
+#        print("tareas no encontrada o lista vacia ")
+# print(cola_tareas)
+    
+           
+# eliminar_tareas(cola_tareas)
+
               
 # ejercicio 7 : contar elementos unicos
+
+
+# def elemntos_unicos(lista):
+#     elemntos_unicos = set(lista)
+#     return len(elemntos_unicos)
+
+# lista = [1 ,2 ,3 ,4 ,5 ,1 ,2 ,3 ,4 ,5,1 ,2 ,3 , 4 ,5 ]
+# print(elemntos_unicos(lista))
+
+# EJERCICIO 8 : COMPROBACION DE PALINDROMOS
+
+
+def es_palindromo (texto):
+    texto=texto.lower()
+    texto_sin_espacio = texto.replace(" ","")
+    return texto_sin_espacio == texto_sin_espacio[:: -1]         
+print(es_palindromo("luz azul"))
+print(es_palindromo("palabra"))
