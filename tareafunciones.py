@@ -77,28 +77,34 @@
 # EJERCICIO 6 = cola de tareas
 
 
-# cola_tareas = [ "hacer mercado" , "lavar loza" , "hacer el aseo" ]
-
-# def agregar_tarea(tareas_pendientes):
-#     tareas_pendientes.insert(cola_tareas)
+# def agregar(tareas):
     
-#     print(cola_tareas)
-# agregar_tarea("lavar la ropa")
-# agregar_tarea("terminar las tareas de la U")
-# agregar_tarea("pasear el perro")
+#     if tareas not in lista_tareas:
+#         lista_tareas.append(tareas)
+        
+# def eliminar(tareas):
+#     if tareas in lista_tareas:
+#         lista_tareas.remove(tareas)
+                
+# lista_tareas = []
+
+# agregar("comprar comida")
+# agregar("lavar la ropa")
+# agregar("lavar la loza")
+# agregar("estudiar y terminar trabajos")
+    
+    
+# for tareas in lista_tareas :
+#     print(tareas)
+    
+    
+# eliminar("comprar comida")
+
+# print("la nueva lista es:") 
+# for tareas in lista_tareas:
+#     print( tareas)     
 
 
-# def eliminar_tareas(tareas_pendientes , cola_tareas):
-    
-#     if tareas_pendientes in cola_tareas:
-#        cola_tareas.pop(0)
-       
-#     else :
-#        print("tareas no encontrada o lista vacia ")
-# print(cola_tareas)
-    
-           
-# eliminar_tareas(cola_tareas)
 
               
 # ejercicio 7 : contar elementos unicos
@@ -125,21 +131,40 @@
 # EJERCICIO 9 : pila historial de navegacion
 
 
+  
+# def agregar_pagina(paginas):
+#     if paginas not in historial:
+#        historial.append(paginas)
+
+# def eliminar_pagina(paginas):
+#     if paginas in historial:
+#         historial.pop()
+        
+
+# def retroceder_pagina(historial):
+#     pagina_anterior = historial.pop()
+#     print(f"retrocede a la pagina{pagina_anterior}")
+    
+            
+                
 # historial = []
 
+# agregar_pagina("www.facebook.com")
+# agregar_pagina("www.youtube.com")
+# agregar_pagina("www.google.com")
+# agregar_pagina("www.chatgpt.com")    
+# for paginas in historial:
+#     print(paginas)
+    
+# eliminar_pagina("www.google.com")
+# print("el historial de navegacion es ")
+# for paginas in historial:
+#     print(paginas)    
 
-# def agregar(paginas):
-    
-#     historial = paginas.append()
-#     pagina_actual = historial
-#     if pagina_actual in historial.pop( -1):
-#         print(pagina_actual)
-    
-# agregar("www.youtube.com")
-# agregar("www.facebook.com")
-# agregar("www.goolge.com")         
-    
+# retroceder_pagina(historial)
 
+
+    
 # EJERCICIO 10 : diccionario de frecuencia
 
 
@@ -218,25 +243,47 @@
 
 # EJERCICIO 14 :CALCULADORA OPERACIONES BASICAS
 
-# def calculadora():
+def sumar(a, b):
+    return a + b
 
+def restar(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "Error: División por cero"
+    else:
+        return a / b
+    
+a = 5
+b = 10
+
+resultado_suma =  sumar(a,b)  
+resultado_resta = restar(a,b)
+resultado_multiplicacion=multiplicar (a,b)
+resultado_dividir=dividir(a,b)
+
+print(f"la suma de: {a}+{b} = {resultado_suma}")
 
 # EJERCICIO 15 : CONVERSION DE UNIDADES
 
-def celcios_to_fahrenheit(celcios):
-    return (celcios * 9/5) + 32
+# def celcios_to_fahrenheit(celcios):
+#     return (celcios * 9/5) + 32
 
-def fahrenheit_to_celcios(fahrenheit):
-    return (fahrenheit - 32) * 5/9
+# def fahrenheit_to_celcios(fahrenheit):
+#     return (fahrenheit - 32) * 5/9
 
-def km_to_millas(km):
-    return km * 0.621371
+# def km_to_millas(km):
+#     return km * 0.621371
 
-def millas_to_km(millas):
-    return millas * 1.60934
+# def millas_to_km(millas):
+#     return millas * 1.60934
 
 
-print(celcios_to_fahrenheit(30)) 
-print(fahrenheit_to_celcios(90)) 
-print(km_to_millas(10))            
-print(millas_to_km(5)) 
+# print(celcios_to_fahrenheit(30)) 
+# print(fahrenheit_to_celcios(90)) 
+# print(km_to_millas(10))            
+# print(millas_to_km(5)) 
